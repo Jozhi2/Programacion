@@ -21,18 +21,23 @@ function botonIngresar(){
 	var formulario = document.createElement('form');
 	formulario.setAttribute('id', 'formularioIngresar');
 	formulario.setAttribute('class', 'quincePixeles');
+	formulario.setAttribute('method','post');
+	formulario.setAttribute('action','../php/usuarios/validar.php');
 	cajaCentradaIngresar.appendChild(formulario); 
 
 	var inputEmail = document.createElement('input');
 	inputEmail.setAttribute('class', 'inputFormularioIngresar quincePixeles');
 	inputEmail.setAttribute('required', '');
 	inputEmail.setAttribute('placeholder', 'Email');
+	inputEmail.setAttribute('type', 'email');
+	inputEmail.setAttribute('name','nick');
 	formulario.appendChild(inputEmail); 
 
 	var inputContraseña = document.createElement('input');
 	inputContraseña.setAttribute('class', 'inputFormularioIngresar inputDerechoFormularioIngresar quincePixeles');
-	inputContraseña.setAttribute('type', 'password');	
 	inputContraseña.setAttribute('placeholder', 'Contraseña');
+	inputContraseña.setAttribute('type', 'password');
+	inputContraseña.setAttribute('name','pass1');
 	formulario.appendChild(inputContraseña);
 
 	var ingresar = document.createElement('button');
