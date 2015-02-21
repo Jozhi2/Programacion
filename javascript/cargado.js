@@ -29,7 +29,7 @@ $(document).on('ready',function(){
 	});
 
 	$(document).on('click','#cerrarSesion',function(){
-	 		alert('estás cerrando sesión');
+	 		location.href='../php/usuarios/logout.php';
 	});
 
 	$(document).on('click','#cubrePantallaOpciones',function(){
