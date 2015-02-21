@@ -14,7 +14,8 @@ $session2=mysqli_query($link, "SELECT * FROM login INNER JOIN negocios ON login.
 $row2=mysqli_fetch_array($session2);
 do {
 	$c=$c+1;
-	$bss_mostrar[$c]=$row2['namebss'] ;
+	$bss_user[$c]=$row2['namebss'] ;
+	$bss_user1[$c]=$row2['id_negocio'] ;
 } while($row2=mysqli_fetch_array($session2));
 
 
