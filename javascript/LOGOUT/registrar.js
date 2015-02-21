@@ -21,41 +21,48 @@ function botonRegistrar(){
 	var formulario = document.createElement('form');
 	formulario.setAttribute('id', 'formularioRegistro');
 	formulario.setAttribute('class', 'quincePixeles');
-	formulario.setAttribute('method', 'post');
+	formulario.setAttribute('method','post');
+	formulario.setAttribute('action','../php/usuarios/registro.php');
 	cajaCentrada.appendChild(formulario); 
 
 	var inputNombre = document.createElement('input');
 	inputNombre.setAttribute('class', 'inputFormularioRegistro quincePixeles');
 	inputNombre.setAttribute('placeholder', 'Nombre');
+	inputNombre.setAttribute('name','realname');
 	formulario.appendChild(inputNombre); 
 
 	var inputApellido = document.createElement('input');
 	inputApellido.setAttribute('class', 'inputFormularioRegistro inputDerechoFormularioRegistro quincePixeles');
 	inputApellido.setAttribute('placeholder', 'Apellido');
+	inputApellido.setAttribute('name','apellido');
 	formulario.appendChild(inputApellido);
-
+	
 	var inputEmail = document.createElement('input');
 	inputEmail.setAttribute('class', 'inputFormularioRegistro quincePixeles');
 	inputEmail.setAttribute('type', 'email');	
-	inputEmail.setAttribute('placeholder', 'Email');
+	inputEmail.setAttribute('placeholder', 'Email');	
+	inputEmail.setAttribute('name','mail');
 	formulario.appendChild(inputEmail); 
 
 	var inputConfirmarEmail = document.createElement('input');
 	inputConfirmarEmail.setAttribute('class', 'inputFormularioRegistro inputDerechoFormularioRegistro quincePixeles');
 	inputConfirmarEmail.setAttribute('type', 'email');
 	inputConfirmarEmail.setAttribute('placeholder', 'Confirmar email');
+	inputConfirmarEmail.setAttribute('name','nick2');
 	formulario.appendChild(inputConfirmarEmail);
 
 	var inputContraseña = document.createElement('input');
 	inputContraseña.setAttribute('class', 'inputFormularioRegistro quincePixeles');
 	inputContraseña.setAttribute('type', 'password');		
 	inputContraseña.setAttribute('placeholder', 'Contraseña');
+	inputContraseña.setAttribute('name','pass');
 	formulario.appendChild(inputContraseña); 
 
 	var inputConfirmarContraseña = document.createElement('input');
 	inputConfirmarContraseña.setAttribute('class', 'inputFormularioRegistro inputDerechoFormularioRegistro quincePixeles');
 	inputConfirmarContraseña.setAttribute('type', 'password');	
 	inputConfirmarContraseña.setAttribute('placeholder', 'Confirmar contraseña');
+	inputConfirmarContraseña.setAttribute('name','rpass');
 	formulario.appendChild(inputConfirmarContraseña);
 
 	var registrar = document.createElement('button');
