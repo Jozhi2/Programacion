@@ -39,6 +39,7 @@ function botonRegistrar(){
 	
 	var inputEmail = document.createElement('input');
 	inputEmail.setAttribute('class', 'inputFormularioRegistro quincePixeles');
+	inputEmail.setAttribute('required', '');
 	inputEmail.setAttribute('type', 'email');	
 	inputEmail.setAttribute('placeholder', 'Email');	
 	inputEmail.setAttribute('name','mail');

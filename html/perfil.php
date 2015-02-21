@@ -31,7 +31,7 @@
 	<div id="encabezado">
 		<div id="encabezadoDivQueCentraContenido">
 			<figure id="encabezadoFigureQueContieneLogo" class="quincePixeles"><img src="../objetos/logo.png"></figure>
-			<form method="POST" action="../php/negocios/buscador.php" id="encabezadoFormulario" autocomplete="off">
+			<form method="POST" action="../php/negocios/variables.php" id="encabezadoFormulario" autocomplete="off">
 				<input type="text" name="cuadroDeBusqueda" id="encabezadoCuadroDeBusqueda" class="quincePixeles"  placeholder="<?php echo $login_session." " .$login_session4;?>">
 			</form>
 			<figure id="encabezadoFotoPerfil" class="quincePixeles"><img src="../objetos/perfil/fotoPerfil.png"></figure>
