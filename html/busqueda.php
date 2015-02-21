@@ -21,7 +21,8 @@
 	<script type="text/javascript" src="../javascript/LOGINOUT/visualizar_negocio.js"></script>
 	<script type="text/javascript" src="../javascript/resize.js"></script>	
 
-	<?php 	include("../php/negocios/buscador.php");?>
+	<?php include("../php/negocios/buscador.php");?>
+	
 
 </head>
 <body>
@@ -33,7 +34,7 @@
 	<div id="encabezado" class="quincePixeles">
 		<div id="encabezadoDivQueCentraContenido">
 			<figure id="encabezadoFigureQueContieneLogo" class="quincePixeles"><img src="../objetos/logo.png"></figure>
-			<form method="POST" action="../php/negocios/buscador.php" id="encabezadoFormulario" autocomplete="off">
+			<form method="POST" action="../php/negocios/variables.php" id="encabezadoFormulario" autocomplete="off">
 				<input type="text" name="cuadroDeBusqueda" id="encabezadoCuadroDeBusqueda" class="quincePixeles" placeholder="Estoy Buscando...">
 			</form>
 			<div id="encabezadoBotonRegistrar" class="quincePixeles">Regístrate</div>
