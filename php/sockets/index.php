@@ -43,7 +43,7 @@ $user_colour = array_rand($colours);
 <script language="javascript" type="text/javascript">  
 $(document).ready(function(){
 	//create a new WebSocket object.
-	var wsUri = "ws://127.0.0.1:12346/php/sockets/server.php"; 	
+	var wsUri = "ws://127.0.0.1:12345/php/sockets/server.php"; 	
 	websocket = new WebSocket(wsUri); 
 	
 	websocket.onopen = function(ev) { // connection is open 
