@@ -1,33 +1,57 @@
 #principal{
 	background: #ececec;
+	height: 24em;
+	margin-bottom: 3.66em;
+	overflow: hidden;
+	position: relative;
+	top: 3.66em;
+	width: 100%;
 }
 
-#principalPublicidadIzquierda{
+.negocioPrincipal{
 	background: #6f6f6e;
-	display: inline-block;
 	height: 24em;
-	margin-top: 3.6em; /*ESTE MARGIN SIRVE PARA REPARAR EL ESPACIO QUE DEJA EL POSITION FIXED DEL ENCABEZADO*/
-	vertical-align: top;
-	width: 17.66em;
-}
-
-#principalPublicidadCentral{
-	background: #6f6f6e;
-	display: inline-block;
-	height: 24em;
-	margin-left: 0.35em;
-	margin-top: 3.6em; /*ESTE MARGIN SIRVE PARA REPARAR EL ESPACIO QUE DEJA EL POSITION FIXED DEL ENCABEZADO*/
-	vertical-align: top;
+	margin: 0;
+	padding: 0;
+	position: absolute;
 	width: 60em;
 }
 
-#principalPublicidadDerecha{
-	background: #6f6f6e;
-	display: inline-block;
-	height: 24em;
-	margin-top: 3.6em; /*ESTE MARGIN SIRVE PARA REPARAR EL ESPACIO QUE DEJA EL POSITION FIXED DEL ENCABEZADO*/
-	position: absolute;
-	right: 0;
-	vertical-align: top;
-	width: 17.66em;
+.negocioPrincipal img{
+	height: 100%;
+	width: 100%;
 }
+
+#ceroNegocio{
+	left: -165em;
+	top: 0;
+}
+
+#primerNegocio{
+	left: -104em;
+}
+
+#segundoNegocio{
+	left: -43em;
+}
+
+#tercerNegocio{
+	left: 18em;
+}
+
+#cuartoNegocio{
+	left: 79em;
+}
+
+#quintoNegocio{
+	left: 140em;
+	top: 0;
+}
+
+#sextoNegocio{
+	left: 201em;
+}
+
+
+
+

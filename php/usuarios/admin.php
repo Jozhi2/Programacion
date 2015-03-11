@@ -40,13 +40,13 @@ include("session.php");
 
 <!-- buscador -->
 <h4 align="center">  click here to <a href="logout.php">LogOut</a> </h4>
-<br>
+
 <form method="POST" action="buscador.php"> 
 <strong>Palabra clave:</strong> <input type="text" name="T1" size="20"><br><br> 
 
 <button type="submit" value="Buscar" name="buscar" class="glyphicon glyphicon-search"> 
 </button>
-</form> <br>
+</form> 
 <!-- buscador -->
 <!-- formulario registro -->
 
@@ -75,7 +75,7 @@ include("session.php");
     </div>
     <div class="form-group">
       <label style="font-size: 14pt"><b>descripcion</b></label>
-      <input type="text" name="descrip"" class="form-control" required placeholder="ingresa descripcion" />
+      <input type="text" name="descrip" class="form-control" required placeholder="ingresa descripcion" />
     </div>
     </div>
    
@@ -84,7 +84,6 @@ include("session.php");
   </fieldset>
 </form>
 </div>
-<br>
 <!--Fin formulario registro -->
 <?php
 		if(isset($_POST['submit'])){
@@ -115,14 +114,7 @@ include("session.php");
  } 
 */ 
 ?>
-<br>
 
-
-
-		</td>
-		</tr>
-		</table>
-		</div></center></div></center>
 
 	
 </body>

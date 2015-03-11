@@ -1,7 +1,10 @@
 /* ESTE ARCHIVO TIENE LOS ESTILOS DE LA SECCIÓN DONDE SE ENCUENTRAN LOS ARTÍCULOS DE NEGOCIOS */
 
 #secundaria{
-	background: #ECECEC;
 	font-size: 0; /*TAL VEZ NO ES NECESARIO, QUITARLO PARA VER SI ES NECESARIO O NO*/
 	width: 100%; 
+}
+
+body{
+	background: #ECECEC;
 }

@@ -1,4 +1,15 @@
 $(document).on('ready',function(){
+	$(document).on('click','#encabezadoFotoPerfil',function(){
+		location.href='../html/perfil.php';
+	});
+
+	$(document).on('click','.LOGIN',function(){
+		location.href='../html/index_login.php';
+	});
+
+	$(document).on('click','.LOGOUT',function(){
+		location.href='../html/index.php';
+	});
 
 	$(document).on('click','#encabezadoBotonRegistrar',function(){
 	 	botonRegistrar(); 
@@ -36,12 +47,12 @@ $(document).on('ready',function(){
 	 	salirVisualizarOpciones(); 
 	});
 
-	$('.negocio').mouseenter(function(){
-	 	calificarNegocio(); 
+	$('.cajaHoverNegocio').mouseenter(function(){
+	 	quitarCajaHoverNegocio(); 
 	});
 
 	$('.negocio').mouseleave(function(){
-	 	salirCalificarNegocio(); 
+	 	ponerCajaHoverNegocio(); 
 	});
 
 	$(document).on('click','#crearNegocioTexto',function(){
@@ -102,6 +113,74 @@ $(document).on('ready',function(){
 		salirCrearCampanaFoto();
 	});
 	
+	$(document).on('click','#ceroNegocio',function(){
+		ceroNegocio();
+	});
+
+	$(document).on('click','#primerNegocio',function(){
+		primerNegocio();
+	});
+
+	$(document).on('click','#segundoNegocio',function(){
+		segundoNegocio();
+	});
+
+	$(document).on('click','#tercerNegocio',function(){
+		tercerNegocio();
+	});
+
+	$(document).on('click','#cuartoNegocio',function(){
+		cuartoNegocio();
+	});
+
+	$(document).on('click','#quintoNegocio',function(){
+		quintoNegocio();
+	});
+
+	$(document).on('click','#sextoNegocio',function(){
+		sextoNegocio();
+	});
+
+	$(document).on('click','.negocioPrincipal',function(){
+		console.log(event.target.parentNode);
+		var figure = event.target.parentNode;
+		left = $(figure).css('left');
+		font = $(figure).css('font-size');
+
+		leftNumero = parseFloat(left);
+		fontNumero = parseFloat(font);
+
+		fontNumeroOperacion = fontNumero * 18;
+
+		if(fontNumeroOperacion.toFixed(4) == leftNumero){
+			visualizarNegocio();
+		}
+
+	});
+
+	$("#cambiarPortada").on('mouseenter', function(){
+    	$("#actualizarFotoPortada").animate({'opacity': '1'},100);
+   	});
+
+    $('#actualizarFotoPortada').on('mouseleave', function (){
+        $("#actualizarFotoPortada").animate({'opacity': '0'}, 100);
+    });
+
+	$("#principalPerfil").on('mouseenter', function () {
+        $("#actualizarFotoPerfil").animate({'opacity': '1'}, 100);
+    });
+
+    $("#actualizarFotoPerfil").on('mouseenter', function () {
+        $("#actualizarFotoPerfil").animate({'opacity': '1'}, 100);
+    });
+
+    $("#actualizarFotoPerfil").on('mouseleave', function(){
+    	$("#actualizarFotoPerfil").animate({'opacity': '0'}, 100);
+    });
+
+    cicloCreaNegocio();//Para sección búsquedas, crea los negocios 
+
+    cicloMisNegocios();//Para encabezado LOGIN, pone tus negocios en visualizar Opciones
 });
 
 

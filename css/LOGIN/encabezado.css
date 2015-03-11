@@ -2,11 +2,12 @@
 	background: white;
 	position: fixed;
 	width: 100%;
-	z-index: 1;
+	z-index: 3;
 }
 
 #encabezadoDivQueCentraContenido{
 	margin: 0px auto; 
+	position: relative;
 	width: 79%;
 }
 
@@ -54,9 +55,10 @@
 
 #encabezadoFotoPerfil{
 	display: inline-block;
-	margin-left: 40em;
-	margin-top: 0.5em;
-	vertical-align: top;
+	height: 2.33em;
+	position: absolute;
+	right: 3em;
+	top: .6em;
 	width: 2.33em;
 }
 
@@ -66,14 +68,15 @@
 	-moz-border-radius: .3em;
 	-o-border-radius: .3em;
 	-ms-border-radius: .3em;	
+	height: 100%;
 	width: 100%;
 }
 
 #encabezadoOpciones{
 	display: inline-block;
-	margin-left: 0.5em;
-	margin-top: 0.5em;
-	vertical-align: top;
+	right: 0em;
+	top: .6em;
+	position: absolute;
 	width: 2.33em;
 }
 

@@ -3,7 +3,7 @@
 	height: 100%;
 	position: fixed;	
 	width: 100%;
-	z-index: 10;
+	z-index: 4;
 }
 
 #cajaCentradaVisualizarNegocio{
@@ -21,7 +21,7 @@
 	top: 50%;
 	right: 50%;
 	width: 84em;
-	z-index: 11;	
+	z-index: 5;	
 }
 
 #negocioParteIzquierda{

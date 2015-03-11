@@ -49,6 +49,11 @@ function botonIngresar(){
 	formulario.appendChild(ingresar);
 
 	cargado();
+
+	$(ingresar).hover( function(){
+			$(ingresar).css('cursor', 'pointer');  	
+		}, function(){
+ 	});
 }
 
 function salirBotonIngresar(){

@@ -75,6 +75,11 @@ function botonRegistrar(){
 	formulario.appendChild(registrar);
 
 	cargado(); 
+
+	$(registrar).hover( function(){
+			$(registrar).css('cursor', 'pointer');  	
+		}, function(){
+ 	});
 }
 
 function salirBotonRegistrar(){

@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 include('connect_db.php');
 //Negocios que no pagan mostrar
 $session3=mysqli_query($link, "SELECT * FROM negocios WHERE clickpay='0' ");
@@ -22,26 +22,86 @@ $d=0;
 if($row4=mysqli_fetch_array($session4)){
 	do {
 		$d=$d+1;
-		$bss_pay[$d]=$row3['namebss'] ;
-		$bss_pay1[$d]=$row3['website'];
-		$bss_pay2[$d]=$row3['address'];
-		$bss_pay3[$d]=$row3['phone'];
-		$bss_pay4[$d]=$row3['email'];
-		$bss_pay5[$d]=$row3['descrip'];
-		$bss_pay6[$d]=$row3['id_negocio'];
+		$bss_pay[$d]=$row4['namebss'] ;
+		$bss_pay1[$d]=$row4['website'];
+		$bss_pay2[$d]=$row4['address'];
+		$bss_pay3[$d]=$row4['phone'];
+		$bss_pay4[$d]=$row4['email'];
+		$bss_pay5[$d]=$row4['descrip'];
+		$bss_pay6[$d]=$row4['id_negocio'];
+		$bss_pay7[$d]=$row4['clickpay'];
 	} while($row4=mysqli_fetch_array($session4));
 }
 //registro random
-$numr=rand(1,$c);
 
-//estrellas
+
+//imagenes
+$consulta=mysqli_query($link, "SELECT imagenbss, namebss FROM negocios INNER JOIN imagenesbss ON negocios.id_negocio = imagenesbss.id_bss where clickpay>'0'");
+
+if($datos = mysqli_fetch_assoc($consulta))
+{
+	do {
+		$e=$e+1;
+		$imagen[$e]=$datos['imagenbss'] ;
+		$id_bss[$e]=$datos['id_negocio'] ;
+		$name_bss[$e]=$datos['namebss'] ;
+		$direccion_bss[$e]=$datos['address'] ;
+		$phone_bss[$e]= $datos['phone'] ;
+		$descripcion_bss[$e]=$datos['descrip'];
+		$email_bss[$e]=$datos['email'];
+		$cal_bss[$e]=$datos['valoracion'];
+		
+	}while($datos = mysqli_fetch_assoc($consulta));
+	
+	for($i=1;$i<=25;$i++) 
+ 	{
+   		$numra[$i]=rand(1,$e);
+    	if($i>1) 
+    	{
+       		for($x=1; $x<$i; $x++)
+       		{
+         		if($numra[$i]==$numra[$x]) 
+         		{ 
+           			$i--; 
+           			break; 
+         		}
+      		}
+   		}
+ 	}
+
+ 	for ($k = 1; $k <=25; $k++) {
+ 		$_SESSION['idneg'][$k]="../../imagenesbss/" . $id_bss[$numra[$k]];
+        if(isset($imagen[$k]))
+            {
+              	$_SESSION['ruta'][$k]="../../imagenesbss/" . $imagen[$numra[$k]];
+            }else{
+                $_SESSION['ruta'][$k]= "../../objetos/sinFoto.png";
+            }
+
+    }
+
+	for ($j = 1; $j <=25; $j++) {
+		$rutan[$j]=$_SESSION['ruta'][$j];
+		$idneg[$j]=$_SESSION['idneg'][$j];
+	}
+	
+}
+
 ?>
 
 <script>
-var variablejs = "<?php echo $c; ?>" ;
-var variablejs2 = "<?php echo $d; ?>" ;
-var number= parseInt(variablejs);
-var number1= parseInt(variablejs2);
-var sum=number+number1;
-
+      var variableb = "<?php echo $e; ?>" ;
+      var numBssClick= parseInt(variableb);
+      //var nombresNegocio= new Array();
+      bssPayImg=<?php echo json_encode($rutan);?>;
+      bssPayImg=<?php echo json_encode($rutan);?>;
+      bssPayImg=<?php echo json_encode($rutan);?>;
+      bssPayImg=<?php echo json_encode($rutan);?>;
+   
+      var bssImgPay=new Array();
+      
+      for(var j = 1; j <= numBssClick; j++){
+            bssImgPay[j]=bssPayImg[j];
+            
+      }
 </script>

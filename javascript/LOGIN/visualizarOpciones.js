@@ -25,6 +25,9 @@ function visualizarOpciones(){
 	crearNegocio.setAttribute('id', 'crearNegocioTexto');
 	crearNegocio.appendChild(crearNegocioTexto);
 
+	var hr = document.createElement('div');
+	hr.setAttribute('id', 'miHr');
+
 	var promocionarCampaña = document.createElement('p');
 	promocionarCampaña.setAttribute('id', 'promocionarCampana');
 	var textoPromocionarCampaña = document.createTextNode('Promocionar campaña');
@@ -32,6 +35,7 @@ function visualizarOpciones(){
 
 	visualizarOpciones.appendChild(cerrarSesion);
 	visualizarOpciones.appendChild(crearNegocio);
+	visualizarOpciones.appendChild(hr);
 	visualizarOpciones.appendChild(promocionarCampaña);
 
 	document.body.insertBefore(cubrePantalla, encabezado); 

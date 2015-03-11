@@ -50,15 +50,25 @@
 
 .fotoNegocio{
 	background: #b2b2b1;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	-o-border-radius: 5px;
-	-ms-border-radius: 5px;	
+	border-radius: .33em;
+	-webkit-border-radius:.33em;
+	-moz-border-radius: .33em;
+	-o-border-radius: .33em;
+	-ms-border-radius: .33em;
 	display: inline-block;
 	margin-top: 0.56em;
 	height: 9.26em;
 	width: 9.26em;
+}
+
+.fotoNegocio img{
+	border-radius: .33em;
+	-webkit-border-radius:.33em;
+	-moz-border-radius: .33em;
+	-o-border-radius: .33em;
+	-ms-border-radius: .33em;	
+	height: 100%;
+	width: 100%
 }
 
 .nombreNegocio{

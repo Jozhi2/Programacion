@@ -2,15 +2,15 @@
 	height: 100%;
 	position: fixed;	
 	width: 100%;
-	z-index: 100
+	z-index: 4;
 }
 
 .triangulo{
-	margin-left: 82.5em;
+	margin-left: 83.8em;
 	margin-top: 3.3em;
 	position: fixed;
 	width: 2em;
-	z-index: 102;
+	z-index: 6;
 }
 
 .triangulo img{
@@ -30,12 +30,19 @@
 	margin-top: 4.26em;
 	position: fixed;
 	width: 14.2em;
-	z-index: 101;
+	z-index: 5;
 }
 
 #visualizarOpciones p{
 	margin-left: 2em;
 	font-family: GothamBook;
+}
+
+#miHr{
+	background: #6f6f6e;
+	height: 1px;
+	margin: 0 auto;
+	width: 80%;
 }
 
 #promocionarCampana{

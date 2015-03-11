@@ -15,7 +15,7 @@
 	$sql=mysqli_query($link,"INSERT INTO negocios VALUES('','$namebss','$website','$address','$phone','$email','$descrip','$login_session3','','$categoria','$subcategoria','')");
 
 	
-	echo ' <script language="javascript">alert("Negocio registrado con éxito");</script> ';	
+	echo ' <script language="javascript">alert("Negocio registrado");</script> ';	
 		//row select Autonumerico FROM Mi_Tabla WHERE Cedula = '1010' AND Nombre = 'Edwin' AND Apellido = 'Gomez';
 	
 	
