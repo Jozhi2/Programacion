@@ -26,9 +26,9 @@ $check=$_SESSION['login_username'];
 	$datos = mysqli_fetch_assoc($consulta);
 	if(isset($datos['imagen']))
 	{
-		$ruta = "../../imagenes/" . $datos['imagen'];
+		$ruta = "../imagenes/" . $datos['imagen'];
 	}else{
-		$ruta = "../../objetos/perfil/fotoPerfil.png";
+		$ruta = "../objetos/perfil/fotoPerfil.png";
 	}
 	
 
