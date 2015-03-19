@@ -38,10 +38,18 @@ if($row4=mysqli_fetch_array($session4)){
 //imagenes
 $consulta=mysqli_query($link, "SELECT * FROM negocios INNER JOIN imagenesbss ON negocios.id_negocio = imagenesbss.id_bss where clickpay>'0'");
 
-if($datos = mysqli_fetch_assoc($consulta))
-{
+	$e=0;
+	$imagen=array();
+	$id_bss=array();
+	$name_bss=array();
+	$direccion_bss=array();
+	$phone_bss=array();
+	$descripcion_bss=array();
+	$email_bss=array();
+	$cal_bss=array();
 
-	do {
+
+	while($datos = mysqli_fetch_assoc($consulta)){
 		$e=$e+1;
 		$imagen[$e]=$datos['imagenbss'] ;
 		$id_bss[$e]=$datos['id_negocio'] ;
@@ -52,8 +60,10 @@ if($datos = mysqli_fetch_assoc($consulta))
 		$email_bss[$e]=$datos['email'];
 		$cal_bss[$e]=$datos['valoracion'];
 		
-	}while($datos = mysqli_fetch_assoc($consulta));
+	}
 	
+	$numra=array();
+
 	for($i=1;$i<=25;$i++) 
  	{
    		$numra[$i]=rand(1,$e);
@@ -70,23 +80,28 @@ if($datos = mysqli_fetch_assoc($consulta))
    		}
  	}
 
+ 
+
  	for ($k = 1; $k <=25; $k++) {
  		$_SESSION['idneg'][$k]="../../imagenesbss/" . $id_bss[$numra[$k]];
         if(isset($imagen[$k]))
             {
-              	$_SESSION['ruta'][$k]="../../imagenesbss/" . $imagen[$numra[$k]];
+              	$_SESSION['ruta'][$k]="../imagenesbss/" . $imagen[$numra[$k]];
             }else{
-                $_SESSION['ruta'][$k]= "../../objetos/sinFoto.png";
+                $_SESSION['ruta'][$k]= "../objetos/sinFoto.png";
             }
 
     }
+
+    $rutan=array();
+    $idneg=array();
 
 	for ($j = 1; $j <=25; $j++) {
 		$rutan[$j]=$_SESSION['ruta'][$j];
 		$idneg[$j]=$_SESSION['idneg'][$j];
 	}
 	
-}
+
 
 ?>
 
@@ -95,9 +110,7 @@ if($datos = mysqli_fetch_assoc($consulta))
       var numBssClick= parseInt(variableb);
       //var nombresNegocio= new Array();
       bssPayImg=<?php echo json_encode($rutan);?>;
-      bssPayImg=<?php echo json_encode($rutan);?>;
-      bssPayImg=<?php echo json_encode($rutan);?>;
-      bssPayImg=<?php echo json_encode($rutan);?>;
+
    
       var bssImgPay=new Array();
       
