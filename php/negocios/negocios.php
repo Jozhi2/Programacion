@@ -36,10 +36,11 @@ if($row4=mysqli_fetch_array($session4)){
 
 
 //imagenes
-$consulta=mysqli_query($link, "SELECT imagenbss, namebss FROM negocios INNER JOIN imagenesbss ON negocios.id_negocio = imagenesbss.id_bss where clickpay>'0'");
+$consulta=mysqli_query($link, "SELECT * FROM negocios INNER JOIN imagenesbss ON negocios.id_negocio = imagenesbss.id_bss where clickpay>'0'");
 
 if($datos = mysqli_fetch_assoc($consulta))
 {
+	$e=0;
 	do {
 		$e=$e+1;
 		$imagen[$e]=$datos['imagenbss'] ;
