@@ -8,7 +8,7 @@
 <body>
 
 <?php 
-//hola Josias quito modificado
+//hola Jorjiño
 $check=$_SESSION['login_username'];
 if(isset($check)){
 	echo "<script>location.href='/html/index_login.php'</script>";
