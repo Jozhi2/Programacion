@@ -1,12 +1,12 @@
 <?php session_start();
       $buscar=$_SESSION['buscar'];
      
-	include("connect_db.php");
-	$result = mysqli_query($link, "SELECT * FROM negocios LEFT JOIN imagenesbss ON negocios.id_negocio = imagenesbss.id_bss WHERE namebss LIKE '%$buscar%'"); 
+  include("connect_db.php");
+  $result = mysqli_query($link, "SELECT * FROM negocios LEFT JOIN imagenesbss ON negocios.id_negocio = imagenesbss.id_bss WHERE namebss LIKE '%$buscar%'"); 
 
       $cb=0;
     if ($row6 = mysqli_fetch_array($result)){ 
-		  do {
+      do {
               $cb=$cb+1;
               $bss_mostrar[$cb]=$row6['namebss'];
               $bss_mostrar1[$cb]=$row6['address'];
@@ -16,13 +16,13 @@
           for ($i = 1; $i <=$cb; $i++) {
                 if(isset($bss_mostrar3[$i]))
                 {
-                    $bss_mostrarimg[$i]="../../imagenesbss/" .$bss_mostrar3[$i];
+                    $bss_mostrarimg[$i]="../imagenesbss/".$bss_mostrar3[$i];
                 }else{
-                    $bss_mostrarimg[$i]= "../../objetos/sinFoto.png";
+                    $bss_mostrarimg[$i]= "../objetos/sinFoto.png";
                 }
 
           }
-	   } 
+     } 
 
        else { 
             echo "¡ No se ha encontrado ningún registro !"; 
