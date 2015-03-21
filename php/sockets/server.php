@@ -1,6 +1,6 @@
  
 <?php
-$host = '10.240.158.74'; //host
+$host = '127.0.0.1'; //host
 $port = '10000'; //port
 $null = NULL; //null var
 

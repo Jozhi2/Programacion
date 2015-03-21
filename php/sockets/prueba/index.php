@@ -3,7 +3,7 @@
 *http://www.php.net/manual/en/ref.sockets.php
 */
 
-$host = "10.240.158.74";
+$host = "127.0.0.1";
 
 $socket = socket_create(AF_INET, SOCK_STREAM, SOL_TCP);
 $puerto = 10000;
