@@ -1,4 +1,4 @@
-<?php session_start();
+<?php 
 include('connect_db.php');
 
 $check=$_SESSION['login_username'];
@@ -13,6 +13,7 @@ $check=$_SESSION['login_username'];
 	//mostrar tus negocios
 	$session2=mysqli_query($link, "SELECT * FROM login INNER JOIN negocios ON login.id_usuario = negocios.id_usuario WHERE login.email='$check' ");
 	$row2=mysqli_fetch_array($session2);
+	$c=0;
 	do {
 		$c=$c+1;
 		$bss_user[$c]=$row2['namebss'] ;
