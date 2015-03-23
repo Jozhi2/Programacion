@@ -2,6 +2,6 @@
 session_start();
 if(session_destroy())
 {
-header("Location: /../programacion/html/index.php");
+header("Location: /../Programacion/html/index.php");
 }
 ?>
