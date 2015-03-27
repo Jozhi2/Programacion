@@ -1,6 +1,6 @@
  
 <?php
-$host = '104.154.37.43'; //host
+$host = '0.0.0.0'; //host
 $port = '8080'; //port
 $null = NULL; //null var
 
