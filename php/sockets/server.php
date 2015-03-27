@@ -1,7 +1,7 @@
  
 <?php
 $host = '0.0.0.0'; //host
-$port = '8080'; //port
+$port = '1000'; //port
 $null = NULL; //null var
 
 //Create TCP/IP sream socket
