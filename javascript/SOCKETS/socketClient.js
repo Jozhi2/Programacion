@@ -1,25 +1,26 @@
-var socket = new io.Socket('localhost',{
-  port: 12345
-});
-socket.connect(); 
+$(document).on('ready',function(){
+	var conn = new WebSocket('ws://localhost:8082');
+	conn.onopen = function(e) {
+    	console.log("Connection established!");
+    };
+    $(document).on('click','.negocio',function(evento){ 
+    	var msg = 'dos'; //get message text
+		
+		//prepare json data
+		/*var msg = {
+		message: mymessage
 
-// Añadir una escucha
-socket.on('connect',function() {
-  console.log('El cliente se ha conectado al servidor');
+		};*/
+		//convert and send data to server
+		conn.send(msg);
+		
+	});
+	conn.onmessage = function(e) {
+		var msgSer = (e.data);
+		console.log(msgSer);
+		
+	};
+	conn.onclose = function(e) {
+    	console.log("conexion cerrada");
+	};
 });
-
-// Añadir escucha de mensaje recibido
-socket.on('message',function(data) {
-  console.log('He recibido un mensaje del servidor',data);
-});
-
-// Añadir escucha de desconectar
-socket.on('disconnect',function() {
-  console.log('EL cliente se ha desconectado');
-});
-
-// Mandar un Mensaje al servidor via Websockets
-function mandarMensajeAlServidor(evento){
-  console.log(evento);
-  // socket.send(evento);
-}
