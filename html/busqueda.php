@@ -11,7 +11,7 @@
 
 	<link rel="shortcut icon" href="../objetos/favicon/favicon.png" />
 	<?php include("../php/negocios/buscador.php");?>
-	<?php include("../php/negocios/negocios.php");?>
+
 	
 	<link rel="stylesheet" type="text/css" href="../css/GENERALES/principal.css">
 	<link rel="stylesheet" type="text/css" href="../css/GENERALES/pixeles.css">

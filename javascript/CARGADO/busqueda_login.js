@@ -8,6 +8,7 @@ $(document).on('ready',function(){
 	});
 
 	$(document).on('click','.negocio',function(evento){
+		datoPicado = $(this).attr('title');
 		visualizarNegocio(); 
 	});
 
@@ -76,6 +77,29 @@ $(document).on('ready',function(){
 
 	$(document).on('click','#cubrePantallaFoto',function(){
 		salirCrearCampanaFoto();
+	});
+
+	$(document).on('click','#flechaIzquierda',function(evento){ 
+		if(datoPicado<2){
+			 datoPicado = document.getElementsByClassName("negocio").length;
+		}else{ 
+			datoPicado = datoPicado - 1; 
+		}
+		salirVisualizarNegocio(); 
+		visualizarNegocio();
+		
+	});
+
+	$(document).on('click','#flechaDerecha',function(evento){ 
+		dato = document.getElementsByClassName("negocio").length;
+		if(datoPicado==dato){
+			datoPicado = 1 ;
+		}else{ 
+			datoPicado = parseInt(datoPicado) + 1;
+		}
+		salirVisualizarNegocio(); 
+		visualizarNegocio();
+		
 	});
 
 	cambiarCursorBusquedaLogin();

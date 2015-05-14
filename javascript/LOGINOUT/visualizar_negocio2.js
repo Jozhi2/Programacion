@@ -1,4 +1,4 @@
-function visualizarNegocio(){
+function visualizarNegocio2(){
 
 	console.log(datoPicado);
 
@@ -29,13 +29,13 @@ function visualizarNegocio(){
 	var imagenPrincipal = document.createElement('img');
 	imagenPrincipal.setAttribute('id', 'imagenPrincipal');
 	imagenPrincipal.setAttribute('class', 'imagenPrincipal');
-	imagenPrincipal.setAttribute('src', imgNegocio[datoPicado]);
+	imagenPrincipal.setAttribute('src', imgNegocio1[datoPicado]);
 	negocioParteDerecha.appendChild(imagenPrincipal); 
 
 	var nombreNegocio = document.createElement('p');
 	nombreNegocio.setAttribute('id', 'nombreNegocio');
 	nombreNegocio.setAttribute('class', 'nomNegocio quincePixeles');
-	nombreNegocioTexto = document.createTextNode(nombreneg[datoPicado]);
+	nombreNegocioTexto = document.createTextNode(nombreneg1[datoPicado]);
 	nombreNegocio.appendChild(nombreNegocioTexto);
 	negocioParteIzquierda.appendChild(nombreNegocio); 
 
@@ -43,7 +43,7 @@ function visualizarNegocio(){
 	var calificacion = document.createElement('figure');
 	calificacion.setAttribute('id', 'calificacionFigure');
 	calificacion.setAttribute('class', 'calificacionF quincePixeles');
-	calificacionTexto = document.createTextNode(valoracionNeg[datoPicado]);
+	calificacionTexto = document.createTextNode(valoracionNeg1[datoPicado]);
 	negocioParteIzquierda.appendChild(calificacion); 
 	calificacion.appendChild(calificacionTexto);
 
@@ -56,7 +56,7 @@ function visualizarNegocio(){
 	var direccion = document.createElement('p');
 	direccion.setAttribute('id', 'direccion');
 	direccion.setAttribute('class', 'quincePixeles');
-	direccionTexto = document.createTextNode(dirNegocio[datoPicado]);
+	direccionTexto = document.createTextNode(dirNegocio1[datoPicado]);
 	negocioParteIzquierda.appendChild(direccion); 
 	direccion.appendChild(direccionTexto);
 
@@ -70,14 +70,14 @@ function visualizarNegocio(){
 	var sitioWeb = document.createElement('p');
 	sitioWeb.setAttribute('id', 'sitioWeb');
 	sitioWeb.setAttribute('class', 'quincePixeles');
-	sitioWebTexto = document.createTextNode(webNeg[datoPicado]);
+	sitioWebTexto = document.createTextNode(webNeg1[datoPicado]);
 	negocioParteIzquierda.appendChild(sitioWeb); 
 	sitioWeb.appendChild(sitioWebTexto);
 
 	var correo = document.createElement('p');
 	correo.setAttribute('id', 'correo');
 	correo.setAttribute('class', 'quincePixeles');
-	correoTexto = document.createTextNode(correoNeg[datoPicado]);
+	correoTexto = document.createTextNode(correoNeg1[datoPicado]);
 	negocioParteIzquierda.appendChild(correo);
 	correo.appendChild(correoTexto);
 
@@ -91,7 +91,7 @@ function visualizarNegocio(){
 	var descripcion = document.createElement('p');
 	descripcion.setAttribute('id', 'descripcion');
 	descripcion.setAttribute('class', 'quincePixeles');
-	descripcionTexto = document.createTextNode(desNegocio[datoPicado]);
+	descripcionTexto = document.createTextNode(desNegocio1[datoPicado]);
 	negocioParteIzquierda.appendChild(descripcion); 
 	descripcion.appendChild(descripcionTexto);
 

@@ -2,7 +2,8 @@ function cicloCreaNegocio(){
 	var secundaria = document.getElementById('secundaria');
 
 	for(var i = 1; i <= number; i++){
-	var negocio = document.createElement('article');
+	negocio = document.createElement('article');
+	negocio.setAttribute('title', i);
 	
 	fontSizeCero = document.createElement('div');
 	fontSizeCero.setAttribute('class', 'fontSizeCero');
@@ -10,15 +11,15 @@ function cicloCreaNegocio(){
 	informacionNegocio = document.createElement('div');
 	informacionNegocio.setAttribute('class', 'informacionNegocio quincePixeles');
 	nombreNegocio = document.createElement('p');
-	nombreNegocio.setAttribute('class', 'nombreNegocio diecisietePixeles')
+	nombreNegocio.setAttribute('class', 'nombreNegocio diecisietePixeles');
 	nombreNegocioTexto = document.createTextNode(nombreneg[i]);
 	nombreNegocio.appendChild(nombreNegocioTexto);
 	direccion = document.createElement('p');
-	direccion.setAttribute('class', 'direccion catorcePixeles')
+	direccion.setAttribute('class', 'direccion catorcePixeles');
 	direccionTexto = document.createTextNode(dirNegocio[i]);
 	direccion.appendChild(direccionTexto);
 	descripcion = document.createElement('p');
-	descripcion.setAttribute('class', 'direccion catorcePixeles')
+	descripcion.setAttribute('class', 'direccion catorcePixeles');
 	descripcionTexto = document.createTextNode(desNegocio[i]);
 	descripcion.appendChild(descripcionTexto);
 	figureImagenEstrellas = document.createElement('figure');
@@ -30,7 +31,7 @@ function cicloCreaNegocio(){
 	informacionNegocio.appendChild(nombreNegocio);
 	informacionNegocio.appendChild(direccion);
 	informacionNegocio.appendChild(descripcion);
-	informacionNegocio.appendChild(figureImagenEstrellas)
+	informacionNegocio.appendChild(figureImagenEstrellas);
 
 	fotoNegocio = document.createElement('figure');
 	fotoNegocio.setAttribute('class', 'fotoNegocio quincePixeles');
@@ -44,9 +45,11 @@ function cicloCreaNegocio(){
 
 	if(i%2 == 0){
 		negocio.setAttribute('class', 'negocioDerecho quincePixeles negocio');
+		
 	}
 	else{
 		negocio.setAttribute('class', 'negocioIzquierdo quincePixeles negocio');
+
 	}
 	
 	secundaria.appendChild(negocio);

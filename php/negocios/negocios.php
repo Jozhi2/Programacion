@@ -48,8 +48,8 @@ $consulta=mysqli_query($link, "SELECT * FROM negocios INNER JOIN imagenesbss ON 
 	$email_bss=array();
 	$cal_bss=array();
 
-
-	while($datos = mysqli_fetch_assoc($consulta)){
+	if($datos=mysqli_fetch_array($consulta)){
+	do{
 		$e=$e+1;
 		$imagen[$e]=$datos['imagenbss'] ;
 		$id_bss[$e]=$datos['id_negocio'] ;
@@ -59,9 +59,10 @@ $consulta=mysqli_query($link, "SELECT * FROM negocios INNER JOIN imagenesbss ON 
 		$descripcion_bss[$e]=$datos['descrip'];
 		$email_bss[$e]=$datos['email'];
 		$cal_bss[$e]=$datos['valoracion'];
+		$web_bss[$e]=$datos['website'];
 		
+	}while($datos = mysqli_fetch_assoc($consulta));
 	}
-	
 	$numra=array();
 
 	for($i=1;$i<=25;$i++) 
@@ -83,7 +84,14 @@ $consulta=mysqli_query($link, "SELECT * FROM negocios INNER JOIN imagenesbss ON 
  
 
  	for ($k = 1; $k <=25; $k++) {
- 		$_SESSION['idneg'][$k]="../../imagenesbss/" . $id_bss[$numra[$k]];
+ 		$_SESSION['idneg'][$k]=$id_bss[$numra[$k]];
+ 		$_SESSION['bssname'][$k]=$name_bss[$numra[$k]];
+ 		$_SESSION['bssdir'][$k]=$direccion_bss[$numra[$k]];
+ 		$_SESSION['bssphone'][$k]=$phone_bss[$numra[$k]];
+ 		$_SESSION['bssdes'][$k]=$descripcion_bss[$numra[$k]];
+ 		$_SESSION['bssval'][$k]=$cal_bss[$numra[$k]];
+ 		$_SESSION['bssemail'][$k]=$email_bss[$numra[$k]];
+ 		$_SESSION['bssweb'][$k]=$web_bss[$numra[$k]];
         if(isset($imagen[$k]))
             {
               	$_SESSION['ruta'][$k]="../imagenesbss/" . $imagen[$numra[$k]];
@@ -99,6 +107,13 @@ $consulta=mysqli_query($link, "SELECT * FROM negocios INNER JOIN imagenesbss ON 
 	for ($j = 1; $j <=25; $j++) {
 		$rutan[$j]=$_SESSION['ruta'][$j];
 		$idneg[$j]=$_SESSION['idneg'][$j];
+		$bssname[$j]=$_SESSION['bssname'][$j];
+		$bssdir[$j]=$_SESSION['bssdir'][$j];
+		$bssphone[$j]=$_SESSION['bssphone'][$j];
+		$bssdes[$j]=$_SESSION['bssdes'][$j];
+		$bssval[$j]=$_SESSION['bssval'][$j];
+		$bsscorreo[$j]=$_SESSION['bssemail'][$j];
+		$bssweb[$j]=$_SESSION['bssweb'][$j];
 	}
 	
 
@@ -106,16 +121,37 @@ $consulta=mysqli_query($link, "SELECT * FROM negocios INNER JOIN imagenesbss ON 
 ?>
 
 <script>
-      var variableb = "<?php echo $e; ?>" ;
-      var numBssClick= parseInt(variableb);
+    var variabled = "<?php echo $e; ?>" ;
+    var number2= parseInt(variabled);
       //var nombresNegocio= new Array();
-      bssPayImg=<?php echo json_encode($rutan);?>;
+    bssPayName=<?php echo json_encode($bssname);?>;
+    bssPayDir=<?php echo json_encode($bssdir);?>;
+    bssPayPhone=<?php echo json_encode($bssphone);?>;
+    bssPayDes=<?php echo json_encode($bssdes);?>;
+    bssPayVal=<?php echo json_encode($bssval);?>;
+    bssCorreo=<?php echo json_encode($bsscorreo);?>;
+    bssPayImg=<?php echo json_encode($rutan);?>;
+    bssWebsite=<?php echo json_encode($bssweb);?>;
 
-   
-      var bssImgPay=new Array();
+   	var nombreneg1=new Array();
+    var dirNegocio1=new Array();
+    var bssPhonePay1=new Array();
+    var desNegocio1=new Array();
+    var valoracionNeg1=new Array();
+    var imgNegocio1=new Array();
+    var correoNeg1=new Array();
+    var webNeg1=new Array();
       
-      for(var j = 1; j <= numBssClick; j++){
-            bssImgPay[j]=bssPayImg[j];
+    for(var j = 1; j <= 25; j++){
+        nombreneg1[j]=bssPayName[j];
+        dirNegocio1[j]=bssPayDir[j];
+        bssPhonePay1[j]=bssPayPhone[j];
+        desNegocio1[j]=bssPayDes[j];
+        valoracionNeg1[j]=bssPayVal[j];
+        imgNegocio1[j]=bssPayImg[j];
+        correoNeg1[j]=bssCorreo[j];
+        webNeg1[j]=bssWebsite[j];
             
-      }
+    }
+     
 </script>

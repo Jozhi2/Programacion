@@ -1,4 +1,6 @@
 $(document).on('ready',function(){
+	
+
 	$(document).on('click','.LOGOUT',function(){
 		location.href='../html/index.php';
 	});
@@ -19,8 +21,9 @@ $(document).on('ready',function(){
 	 	salirBotonIngresar(); 
 	});
 
-	$(document).on('click','.negocio',function(evento){
-		visualizarNegocio(); 
+	$(document).on('click','.negocio',function(evento){ 
+		datoPicado = $(this).attr('title');
+		visualizarNegocio2();
 	});
 
 	$(document).on('click','#cubrePantallaVisualizarNegocio',function(){
@@ -75,18 +78,33 @@ $(document).on('ready',function(){
 		fontNumeroOperacion = fontNumero * 18;
 
 		if(fontNumeroOperacion.toFixed(4) == leftNumero){
-			visualizarNegocio();
+			datoPicado = $(this).attr('title');
+			visualizarNegocio2();
 		}
 
 	});
 
 	cambiarCursorIndex();
 
-	$(document).on('click', '#flechaIzquierda', function(){
-
+	$(document).on('click','#flechaIzquierda',function(evento){ 
+		if(datoPicado<2){
+			 datoPicado = 25;
+		}else{ 
+			datoPicado = datoPicado - 1; 
+		}
+		salirVisualizarNegocio(); 
+		visualizarNegocio2();
+		
 	});
 
-	$(document).on('click', '#flechaDerecha', function(){
+	$(document).on('click','#flechaDerecha',function(evento){ 
+		if(datoPicado>24){
+			datoPicado = 1 ;
+		}else{ 
+			datoPicado = parseInt(datoPicado) + 1;
+		}
+		salirVisualizarNegocio(); 
+		visualizarNegocio2();
 		
 	});
 
@@ -95,11 +113,6 @@ $(document).on('ready',function(){
 	});
 
 
-	$(document).on('click', '.negocio', function(evento){
-		var negocio = document.getElementsByClassName('negocio');
-
-		mandarMensajeAlServidor(negocio);
-	});
 });
 
 

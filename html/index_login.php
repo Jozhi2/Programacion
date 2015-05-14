@@ -31,7 +31,7 @@
 	<script type="text/javascript" src="../javascript/CARGADO/index_login.js"></script>
 	<script type="text/javascript" src="../javascript/LOGINOUT/cambiarCursor.js"></script>
 	<script type="text/javascript" src="../javascript/SOCKETS/socket.js"></script>
-	<script type="text/javascript" src="../javascript/LOGINOUT/visualizar_negocio.js"></script>	
+	<script type="text/javascript" src="../javascript/LOGINOUT/visualizar_negocio2.js"></script>	
 	<script type="text/javascript" src="../javascript/LOGIN/visualizarOpciones.js"></script>
 	<script type="text/javascript" src="../javascript/LOGIN/mis_negocios.js"></script>
 	<script type="text/javascript" src="../javascript/LOGIN/crear_negocio.js"></script>
@@ -56,40 +56,40 @@
 
 	<!-- SECCION PRINCIPAL -->
 	<div id="principal" class="quincePixeles">
-		<figure id="primerNegocio" class="quincePixeles negocioPrincipal">
+		<figure id="primerNegocio" class="quincePixeles negocioPrincipal" title="1">
 			<?php echo "<img src='$rutan[1]' />"; ?>
 		</figure>
-		<figure id="segundoNegocio" class="quincePixeles negocioPrincipal">
+		<figure id="segundoNegocio" class="quincePixeles negocioPrincipal" title="2">
 			<?php echo "<img src='$rutan[2]' />"; ?>
 		</figure>
-		<figure id="tercerNegocio" class="quincePixeles negocioPrincipal">
+		<figure id="tercerNegocio" class="quincePixeles negocioPrincipal" title="3">
 			<?php echo "<img src='$rutan[3]' />"; ?>
 		</figure>
-		<figure id="cuartoNegocio" class="quincePixeles negocioPrincipal">
+		<figure id="cuartoNegocio" class="quincePixeles negocioPrincipal" title="4">
 			<?php echo "<img src='$rutan[4]' />"; ?>
 		</figure>
-		<figure id="quintoNegocio" class="quincePixeles negocioPrincipal">
+		<figure id="quintoNegocio" class="quincePixeles negocioPrincipal" title="5">
 			<?php echo "<img src='$rutan[5]' />"; ?>
 		</figure>
-		<figure id="ceroNegocio" class="quincePixeles negocioPrincipal">
+		<figure id="ceroNegocio" class="quincePixeles negocioPrincipal" title="6">
 			<?php echo "<img src='$rutan[6]' />"; ?>
 		</figure>
-		<figure id="sextoNegocio" class="quincePixeles negocioPrincipal">
+		<figure id="sextoNegocio" class="quincePixeles negocioPrincipal" title="7">
 			<?php echo "<img src='$rutan[7]' />"; ?>
 		</figure>
 	</div><!-- FINALIZA LA SECCIÓN PRINCIPAL -->
 
-		<!-- SECCION SECUNDARIA -->
+	<!-- SECCION SECUNDARIA -->
 	<div id="secundario" class="quincePixeles">
-		<div class="secundarioPub secundarioPublicidadIzquierda quincePixeles negocio">
+		<div class="secundarioPublicidadIzquierda quincePixeles negocio" title="8">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
-					<figure><img src="../objetos/estrellas/2cal.png"></figure>
+					<figure><img src="../objetos/estrellas/4cal.png"></figure>
 				</div>
 			</div>
 			<?php echo "<img src='$rutan[8]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadCentral quincePixeles negocio">
+		<div class="secundarioPublicidadCentral quincePixeles negocio" title="9">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/8cal.png"></figure>
@@ -97,7 +97,7 @@
 			</div>
 			<?php echo "<img src='$rutan[9]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadDerecha quincePixeles negocio">
+		<div class="secundarioPublicidadDerecha quincePixeles negocio" title="10">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -106,7 +106,7 @@
 			<?php echo "<img src='$rutan[10]' />"; ?>
 		</div>
 
-		<div class="secundarioPub secundarioPublicidadIzquierda quincePixeles negocio">
+		<div class="secundarioPublicidadIzquierda quincePixeles negocio" title="11">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -114,7 +114,7 @@
 			</div>
 			<?php echo "<img src='$rutan[11]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadCentral quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadCentral quincePixeles negocio" title="12">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -122,7 +122,7 @@
 			</div>
 			<?php echo "<img src='$rutan[12]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadDerecha quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadDerecha quincePixeles negocio" title="13">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -131,7 +131,7 @@
 			<?php echo "<img src='$rutan[13]' />"; ?>
 		</div>
 
-		<div class="secundarioPub secundarioPublicidadIzquierda quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadIzquierda quincePixeles negocio" title="14">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -139,7 +139,7 @@
 			</div>
 			<?php echo "<img src='$rutan[14]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadCentral quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadCentral quincePixeles negocio" title="15">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -147,7 +147,7 @@
 			</div>
 			<?php echo "<img src='$rutan[15]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadDerecha quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadDerecha quincePixeles negocio" title="16">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -156,7 +156,7 @@
 			<?php echo "<img src='$rutan[16]' />"; ?>
 		</div>
 
-		<div class="secundarioPub secundarioPublicidadIzquierda quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadIzquierda quincePixeles negocio" title="17">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -164,7 +164,7 @@
 			</div>
 			<?php echo "<img src='$rutan[17]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadCentral quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadCentral quincePixeles negocio" title="18">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -172,7 +172,7 @@
 			</div>
 			<?php echo "<img src='$rutan[18]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadDerecha quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadDerecha quincePixeles negocio" title="19">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -181,7 +181,7 @@
 			<?php echo "<img src='$rutan[19]' />"; ?>
 		</div>
 
-		<div class="secundarioPub secundarioPublicidadIzquierda quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadIzquierda quincePixeles negocio" title="20">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -189,7 +189,7 @@
 			</div>
 			<?php echo "<img src='$rutan[20]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadCentral quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadCentral quincePixeles negocio" title="21">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -197,7 +197,7 @@
 			</div>
 			<?php echo "<img src='$rutan[21]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadDerecha quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadDerecha quincePixeles negocio" title="22">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -206,7 +206,7 @@
 			<?php echo "<img src='$rutan[22]' />"; ?>
 		</div>
 
-		<div class="secundarioPub secundarioPublicidadIzquierda quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadIzquierda quincePixeles negocio" title="23">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -214,7 +214,7 @@
 			</div>
 			<?php echo "<img src='$rutan[23]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadCentral quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadCentral quincePixeles negocio" title="24">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>
@@ -222,7 +222,7 @@
 			</div>
 			<?php echo "<img src='$rutan[24]' />"; ?>
 		</div>
-		<div class="secundarioPub secundarioPublicidadDerecha quincePixeles negocio">
+		<div class="secundarioPub secundarioPublicidadDerecha quincePixeles negocio" title="25">
 			<div class="cajaHoverNegocio">
 				<div class="centraEstrellas quincePixeles">
 					<figure><img src="../objetos/estrellas/9cal.png"></figure>

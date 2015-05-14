@@ -13,7 +13,7 @@
 
 	<?php include("../php/usuarios/session.php");?>
 	<?php include("../php/negocios/buscador.php");?>
-	<?php include("../php/negocios/negocios.php");?>
+
 	
 
 	<link rel="stylesheet" type="text/css" href="../css/GENERALES/principal.css">
