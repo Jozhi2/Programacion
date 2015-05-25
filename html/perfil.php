@@ -25,9 +25,9 @@
 	<link rel="stylesheet" type="text/css" href="../css/LOGIN/crear_campana_foto.css">
 	<link rel="stylesheet" type="text/css" href="../css/LOGIN/publicacion.css">
 
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
 	<script type="text/javascript" src="../javascript/jquery-1.11.1.min.js"></script>
-	<script type="text/javascript" src="../javascript/resize.js"></script>
-	<script type="text/javascript" src="../javascript/CARGADO/perfil.js"></script>
+	<script type="text/javascript" src="../javascript/resize.js"></script>	
 	<script type="text/javascript" src="../javascript/SOCKETS/socket.js"></script>
 	<script type="text/javascript" src="../javascript/LOGINOUT/cambiarCursor.js"></script>
 	<script type="text/javascript" src="../javascript/LOGIN/visualizarOpciones.js"></script>
@@ -35,6 +35,7 @@
 	<script type="text/javascript" src="../javascript/LOGIN/mis_negocios.js"></script>
 	<script type="text/javascript" src="../javascript/LOGIN/crear_negocio.js"></script>
 	<script type="text/javascript" src="../javascript/LOGIN/crear_campana.js"></script>
+	<script type="text/javascript" src="../javascript/CARGADO/perfil.js"></script>
 	
 </head>
 <body>
@@ -71,6 +72,9 @@
 				<img src="../objetos/perfil/camaraLimpia.png">
 			</figure>
 			<p id="textoCambiarFotoPerfil" class="quincePixeles">Actualizar foto de perfil</p>	           				
+			<form  action= "../php/usuarios/subir.php" method="post" enctype="multipart/form-data">
+				<input class = "botonSubirFoto" type="file" onchange="this.form.submit()" name ="imagen" />
+			</form>	 
 		</div>
 		<figure id="principalPerfil" class="quincePixeles">
 			<?php echo "<img src='$ruta' />"; ?>

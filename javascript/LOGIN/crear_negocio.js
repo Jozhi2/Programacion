@@ -1,4 +1,7 @@
+
+
 function crearNegocio(){
+
 	var encabezado = document.getElementById('encabezado');
 
 	var cubrePantallaCrearNegocio = document.createElement('div');
@@ -20,6 +23,7 @@ function crearNegocio(){
 	formulario.setAttribute('class', 'quincePixeles');
 	formulario.setAttribute('method', 'post');
 	formulario.setAttribute('action', '../php/usuarios/registrobss.php');
+	formulario.setAttribute('enctype', 'multipart/form-data');
 	cajaCentrada.appendChild(formulario); 
 
 	var inputNombre = document.createElement('input');
@@ -70,9 +74,12 @@ function crearNegocio(){
 	inputDescripcion.setAttribute('name', 'descrip');
 	formulario.appendChild(inputDescripcion);
 
+
 	var contenedorSubirImagenes = document.createElement('div');
 	contenedorSubirImagenes.setAttribute('id', 'contenedorSubirImagenes');
 	cajaCentrada.appendChild(contenedorSubirImagenes);
+		formulario.appendChild(contenedorSubirImagenes);
+
 
 	var primerFigure = document.createElement('figure');
 	primerFigure.setAttribute('id', 'primerFigure');
@@ -81,6 +88,15 @@ function crearNegocio(){
 	primeraImagen.setAttribute('src', '../objetos/subirImagenes/subirImagen.png');
 	primerFigure.appendChild(primeraImagen);
 	contenedorSubirImagenes.appendChild(primerFigure);
+
+	
+	var inputSubirImagen = document.createElement('input');
+	inputSubirImagen.setAttribute('class', 'imagenSubirAr');
+	inputSubirImagen.setAttribute('type', 'file');
+	inputSubirImagen.setAttribute('name', 'file');
+
+	formulario.appendChild(inputSubirImagen);
+	contenedorSubirImagenes.appendChild(inputSubirImagen);
 
 	var segundoFigure = document.createElement('figure');	
 	segundoFigure.setAttribute('id', 'segundoFigure');
@@ -114,8 +130,30 @@ function crearNegocio(){
 	document.body.insertBefore(cubrePantallaCrearNegocio, encabezado);
 	document.body.insertBefore(cajaCentrada, encabezado);
 
+
 	cargado();
+$(function(){
+	$("input[name = 'file']").on("change", function(){
+	alert("hola");
+    	var formData = new FormData($("#formularioRegistroNegocios")[0]);
+    	var rutaNegocio = "../php/negocios/imagen-ajax.php";
+    	$.ajax({
+    		url: rutaNegocio,
+    		type: "POST",
+    		data: formData, 
+    		contentType: false,
+    		processData: false,
+    		success: function(datos)
+    		{
+    			$("#primerFigure").html(datos);
+    		}
+
+    	});
+    });
+});
+	
 }
+
 
 function salirCrearNegocio(){
 	document.body.removeChild(cubrePantallaCrearNegocio);

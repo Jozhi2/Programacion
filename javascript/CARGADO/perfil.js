@@ -98,6 +98,26 @@ $(document).on('ready',function(){
     	$("#actualizarFotoPerfil").animate({'opacity': '0'}, 100);
     });
 
+    
+	$("input[name = 'file']").on("change", function(){
+	alert("hola");
+    	var formData = new FormData($("#formularioRegistroNegocios")[8]);
+    	var rutaNegocio = "../php/negocios/imagen-ajax.php";
+    	$.ajax({
+    		url: rutaNegocio,
+    		type: "POST",
+    		data: formData, 
+    		contentType: false,
+    		processData: false,
+    		success: function(datos)
+    		{
+    			$("#segundoFigure").html(datos);
+    		}
+
+    	});
+    });
+
+
     cambiarCursorPerfil();
 
 });

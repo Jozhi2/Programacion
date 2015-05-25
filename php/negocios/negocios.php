@@ -62,7 +62,7 @@ $consulta=mysqli_query($link, "SELECT * FROM negocios INNER JOIN imagenesbss ON 
 		$web_bss[$e]=$datos['website'];
 		
 	}while($datos = mysqli_fetch_assoc($consulta));
-	}
+	
 	$numra=array();
 
 	for($i=1;$i<=25;$i++) 
@@ -115,7 +115,7 @@ $consulta=mysqli_query($link, "SELECT * FROM negocios INNER JOIN imagenesbss ON 
 		$bsscorreo[$j]=$_SESSION['bssemail'][$j];
 		$bssweb[$j]=$_SESSION['bssweb'][$j];
 	}
-	
+	}
 
 
 ?>
